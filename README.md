@@ -32,9 +32,10 @@ rs.initiate(
 
 ### Utilisation
 
-1) Initialiser la base elasticsearch :
+1) Créer répertoire locaux et Initialiser la base elasticsearch :
 
 ```
+./0_init_folders.sh
 python 0_init_es.py
 ```
 
