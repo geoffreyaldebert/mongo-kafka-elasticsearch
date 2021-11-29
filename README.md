@@ -53,3 +53,38 @@ python fill_mongo.py
 ```
 
 
+
+## KSQL
+
+CREATE STREAM dataset (id VARCHAR, title VARCHAR, description VARCHAR, organization VARCHAR, orga_sp INT, dataset_views INT, dataset_followers INT, orga_followers INT, dataset_featured INT, concat_title_org VARCHAR, url VARCHAR, organization_id VARCHAR, dataset_reuses INT, resources_count INT, temporal_coverage_start INT, spatial_granularity INT, temporal_coverage_end INT, spatial_zones INT) WITH (KAFKA_TOPIC='dataset', PARTITIONS=1, VALUE_FORMAT='JSON');
+
+CREATE SINK CONNECTOR SINK_ELASTIC_dataset WITH (
+    'connector.class' = 'io.confluent.connect.elasticsearch.ElasticsearchSinkConnector',
+    'connection.url' = 'http://elasticsearch:9200',
+    'key.converter' = 'org.apache.kafka.connect.storage.StringConverter',
+    'value.converter' = 'org.apache.kafka.connect.json.JsonConverter',
+    'value.converter.schemas.enable' = 'false',
+    'type.name' = '_doc',
+    'topics' = 'dataset',
+    'key.ignore' = 'false',
+    'schema.ignore' = 'true',
+    'behavior.on.null.values' = 'delete'
+);
+
+## Via command line docker
+
+docker exec -it ksqldb-server /bin/ksql --execute "CREATE STREAM dataset (id VARCHAR, title VARCHAR, description VARCHAR, organization VARCHAR, orga_sp INT, dataset_views INT, dataset_followers INT, orga_followers INT, dataset_featured INT, concat_title_org VARCHAR, url VARCHAR, organization_id VARCHAR, dataset_reuses INT, resources_count INT, temporal_coverage_start INT, spatial_granularity INT, temporal_coverage_end INT, spatial_zones INT) WITH (KAFKA_TOPIC='dataset', PARTITIONS=1, VALUE_FORMAT='JSON');" -- http://localhost:8088
+
+docker exec -it ksqldb-server /bin/ksql --execute "CREATE SINK CONNECTOR SINK_ELASTIC_dataset WITH (
+    'connector.class' = 'io.confluent.connect.elasticsearch.ElasticsearchSinkConnector',
+    'connection.url' = 'http://elasticsearch:9200',
+    'key.converter' = 'org.apache.kafka.connect.storage.StringConverter',
+    'value.converter' = 'org.apache.kafka.connect.json.JsonConverter',
+    'value.converter.schemas.enable' = 'false',
+    'type.name' = '_doc',
+    'topics' = 'dataset',
+    'key.ignore' = 'false',
+    'schema.ignore' = 'true',
+    'behavior.on.null.values' = 'delete'
+);" -- http://localhost:8088
+
