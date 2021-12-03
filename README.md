@@ -51,5 +51,3 @@ Remplir la base mongo (un record est envoyé toutes les 1s) :
 ```
 python fill_mongo.py
 ```
-
-

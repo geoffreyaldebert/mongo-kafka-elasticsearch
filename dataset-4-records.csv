@@ -1,0 +1,44 @@
+id,title,description,organization,orga_sp,dataset_views,dataset_followers,orga_followers,dataset_featured,concat_title_org,url,organization_id,dataset_reuses,resources_count,temporal_coverage_start,spatial_granularity,temporal_coverage_end,spatial_zones
+615e7155a179d83fe030d544,Eau-Réserve Incendie,"Ce jeu de données détaille pour les communes de l'ancien territoire de la communauté urbaine de Grand Poitiers, le nombre de réserves incendies disponibles pour les Services Départementaux d'Incendie et de Secours (SDIS).
+
+Dans le cadre de la défense incendie et en complément des équipements initiaux (poteaux incendie et bouches incendie), nous installons de réserves artificielles. Ces équipements permettent de stocker des M3 d'eau pour les utiliser contre les incendies.",Grand Poitiers Open Data,4.0,1,1,3,1,Eau-Réserve Incendie Grand Poitiers Open Data,http://www.data.gouv.fr/fr/datasets/eau-reserve-incendie/,54da1f52c751df59f7467389,0,0,0,0,0,0
+615e398283aaed7339b0681a,Liste des structures de la Justice en Corse,"Liste de l'ensemble des juridictions Corse géocodées avec les horaires et coordonnées.
+
+Les données (France métropolitaine et DOM-TOM) recensent :  
+
+
+  * Les juridictions type la Cour de Cassation et Conseil d’Etat cours d’appel et chambres détachées de la Cour d’appel, les tribunaux (judiciaire, commerce, administratifs, etc.) et cours d’appel administratives.
+  * L'administration pénitentiaire (établissements pénitentiaires, les services d’insertion et de probation et des directions inter-régionales des services pénitentiaires)
+  * Les établissements pénitentiaires (centres de détention, centres pénitentiaires, maisons centrales, maisons d’arrêt et établissements pour mineurs)
+  * Les services d’insertion et de probation
+  * Les directions interrégionales des services pénitentiaires
+  * Protection Judiciaires de la Jeunesse (directions inter-régionales et territoriales de la protection judiciaire de la jeunesse)
+  * Accès au droit : toutes les structures Justice hors milieu pénitentiaire, lieux hors Justice types mairies, centres médicaux-sociaux, etc. et associations spécialisés dans l’accès au droit et faisant parti des dispositifs mis en place et coordonnés par les Conseils Départementaux d’Accès au Droit (les Conseils Départementaux d’accès au droit, les maisons de justice et du droit et antennes de justice, les antennes juridiques et de médiation, les points d’accès au droit généralistes et spécialisés, les relais d’accès au droit généralistes et spécialisés et les permanences d’information et d’orientation juridiques.
+
+
+
+Les données sont extraites du site [www.annuaires.justice.gouv.fr](http://www.annuaires.justice.gouv.fr/). Les données sont issues de la base Francine (qui recense l'ensemble des données géocodées des structures de la Justice), dont la consultation est disponible en ligne sur l'espace ''Justice en région'' du site web mentionné ci-dessus.
+
+Tous les champs ne sont pas remplis (fax, téléphone, horaires d'ouverture). La position géographique est fournie dans le fichier mais peut être approximative.
+
+* * *
+
+Enrichissement 
+
+Pour faciliter la recherche et les analyses les informations suivantes ont été rajoutées:
+
+  * Nom et code de la région (France Métropolitaine et DOM-TOM)
+  * Nom et code du département (France Métropolitaine et DOM)
+  * Catégorie de l'établissement (juridiction, administration pénitentiaire, protection judiciaire de la jeunesse, ecoles et pôles de formation et accès au droit)",Collectivité de Corse,4.0,1,1,3,1,Liste des structures de la Justice en Corse Collectivité de Corse,http://www.data.gouv.fr/fr/datasets/liste-des-structures-de-la-justice-en-corse/,537d58eea3a72973a2dc026c,0,0,0,0,0,0
+615e38ebd72334114cb0681a,Etude Caisse d'Epargne - Association e-Enfance/3018 sur le cyber-harcèlement des jeunes,"Etude Caisse d'Epargne - Association e-Enfance/3018 sur le cyber-harcèlement des jeunes.
+
+Pour mieux comprendre les problématiques des familles et les aider face au phénomène grandissant de cyber-harcèlement, la Caisse d'Epargne et l'Association e-Enfance/3018 dévoilent les résultats d'une étude inédite. 
+
+Cet état des lieux du cyber-harcèlement en France révèle notamment les besoins des parents en matière de prévention et d'accompagnement concret face aux risques d'Internet.
+
+Cette étude s'inscrit dans le cadre d'un mécénat entre la Caisse d'Epargne, banque et assurance de la famille, et l'Association e-Enfance/3018, référente pour la protection de l'enfance sur Internet qui a pour objectif de renforcer le soutien opérationnel aux familles concernées.
+
+  
+
+
+Résultats de l'enquête réalisée par l'institut Audirep en avril et mai 2021 par Internet auprès de 1204 binômes parent-enfant (2408 répondants au total)",Groupe BPCE,1.0,1,1,2,1,Etude Caisse d'Epargne - Association e-Enfance/3018 sur le cyber-harcèlement des jeunes Groupe BPCE,http://www.data.gouv.fr/fr/datasets/etude-caisse-depargne-association-e-enfance-3018-sur-le-cyber-harcelement-des-jeunes/,59e4ade488ee38366b2f58ab,0,0,0,0,0,0
