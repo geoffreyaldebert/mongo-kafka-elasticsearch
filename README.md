@@ -37,13 +37,26 @@ rs.initiate(
 ```
 ./0_init_folders.sh
 python 0_init_es.py
+python 0_get_data.py
 ```
 
 Faire tourner le consumer et le producer en continu :
 
 ```
-python consumer.py
-python producer.py
+# Consumer pour poster un message sur mattermost
+python consumer-mattermost.py 
+# Consumer pour indexer des documents elastic
+python consumer-elastic.py
+
+# créer des datasets
+python producer-datasets.py create
+# modifier un dataset
+python producer-datasets.py update
+# Supprimer un dataset
+python producer-datasets.py delete
+
+
+# La partie mongo est laissée de côté pour le moment
 ```
 
 Remplir la base mongo (un record est envoyé toutes les 1s) :
