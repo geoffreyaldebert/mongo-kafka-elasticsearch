@@ -7,6 +7,7 @@ es = Elasticsearch([{'host': 'localhost', 'port': '9200'}])
 index = 'dataset'
 
 for message in consumer:
+  print('yesss')
   value = message.value
   val_utf8 = value.decode("utf-8").replace("NaN","null")
   data = json.loads(val_utf8)
@@ -15,4 +16,5 @@ for message in consumer:
   if(val_utf8 != 'null'):
     es.update(index=index, id=key.decode("utf-8"), body={ "doc": data, "doc_as_upsert": True })
   else:
-    es.delete(index=index, id=key.decode("utf-8"))
+    if(es.exists_source(index=index, id=key.decode("utf-8"))):
+      es.delete(index=index, id=key.decode("utf-8"))
